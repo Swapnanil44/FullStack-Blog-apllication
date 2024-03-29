@@ -21,7 +21,7 @@ export function SignupAuth(){
        try{
        const response = await axios.post(`${BACKEND_URL}/api/v1/user/signup`,postInput);
        const token = response.data;
-        localStorage.setItem("token",token.jwt);
+        localStorage.setItem("token",token.token);
        navigate("/blogs")
        }
        catch(e){
